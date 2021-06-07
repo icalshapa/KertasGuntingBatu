@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">Kertas Gunting Batu</string>
+    <string name="tv_result_lose">LOSE!!</string>
+    <string name="tv_result_draw">DRAW!!</string>
+    <string name="tv_result_win">WIN!!</string>
+    <string name="tv_result_vs">VS</string>
 </resources>
