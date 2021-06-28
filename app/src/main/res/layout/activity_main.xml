@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.MainActivity">
+    tools:context=".ui.game.GameActivity">
 
     <ImageView
         android:id="@+id/iv_background"
@@ -24,57 +24,105 @@
 
     <ImageView
         android:id="@+id/iv_restart"
-        android:layout_width="@dimen/_50sdp"
-        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/_50sdp"
         android:src="@drawable/ic_restart"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent" />
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/iv_weapon_human_scissor"/>
+
+    <TextView
+        android:id="@+id/tv_lock"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="LOCK"
+        android:textSize="@dimen/_40ssp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@id/iv_restart"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@id/iv_restart" />
 
     <TextView
         android:id="@+id/tv_result"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textSize="@dimen/_50ssp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@id/iv_restart"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@id/iv_title"
         tools:text="VS" />
 
-    <ImageView
-        android:id="@+id/iv_player_human"
-        android:layout_width="@dimen/_30sdp"
-        android:layout_height="@dimen/_30sdp"
-        android:src="@drawable/ic_player_human"
-        app:layout_constraintLeft_toLeftOf="@id/iv_weapon_human_paper"
-        app:layout_constraintTop_toBottomOf="@id/iv_weapon_human_paper" />
-
     <TextView
-        android:id="@+id/tv_score_human"
+        android:id="@+id/tv_turn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="@dimen/_22ssp"
-        app:layout_constraintLeft_toRightOf="@id/iv_player_human"
-        app:layout_constraintTop_toBottomOf="@id/iv_weapon_human_paper"
-        tools:text="99" />
+        android:text="Your turn,"
+        android:textSize="@dimen/_30ssp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@id/iv_weapon_robot_scissor" />
 
     <TextView
-        android:id="@+id/tv_score_robot"
+        android:id="@+id/tv_turn_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="@dimen/_22ssp"
-        app:layout_constraintRight_toLeftOf="@id/iv_player_robot"
-        app:layout_constraintBottom_toTopOf="@id/iv_weapon_robot_rock"
-        tools:text="99" />
+        android:maxLines="1"
+        android:textSize="@dimen/_30ssp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_turn"
+        tools:text="Player" />
 
     <ImageView
         android:id="@+id/iv_player_robot"
         android:layout_width="@dimen/_30sdp"
         android:layout_height="@dimen/_30sdp"
         android:src="@drawable/ic_player_robot"
-        app:layout_constraintBottom_toTopOf="@id/iv_weapon_robot_rock"
+        app:layout_constraintBottom_toBottomOf="@id/tv_name_two"
         app:layout_constraintRight_toRightOf="@id/iv_weapon_robot_rock" />
+
+    <TextView
+        android:id="@+id/tv_name_two"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_20sdp"
+        android:layout_marginEnd="@dimen/_20sdp"
+        android:textSize="@dimen/_18ssp"
+        android:textAlignment="textEnd"
+        app:layout_constraintBottom_toTopOf="@id/tv_result"
+        tools:text="Player Two" />
+
+    <TextView
+        android:id="@+id/tv_name_one"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_20sdp"
+        android:layout_marginEnd="@dimen/_20sdp"
+        android:textSize="@dimen/_18ssp"
+        app:layout_constraintTop_toBottomOf="@id/tv_result"
+        tools:text="Player One" />
+
+    <TextView
+        android:id="@+id/tv_score_two"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/_22ssp"
+        app:layout_constraintRight_toRightOf="@id/tv_name_two"
+        app:layout_constraintTop_toBottomOf="@id/tv_name_two"
+        tools:text="99" />
+
+    <TextView
+        android:id="@+id/tv_score_one"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/_22ssp"
+        app:layout_constraintBottom_toTopOf="@id/tv_name_one"
+        app:layout_constraintLeft_toLeftOf="@id/tv_name_one"
+        tools:text="99" />
 
     <ImageView
         android:id="@+id/iv_weapon_robot_scissor"

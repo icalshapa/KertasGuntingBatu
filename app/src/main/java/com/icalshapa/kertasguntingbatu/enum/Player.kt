@@ -1,5 +1,5 @@
 package com.icalshapa.kertasguntingbatu.enum
 
 enum class Player {
-    HUMAN,ROBOT
+    PLAYER_ONE,PLAYER_TWO
 }

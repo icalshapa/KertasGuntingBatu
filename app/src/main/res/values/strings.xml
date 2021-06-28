@@ -1,7 +1,23 @@
 <resources>
     <string name="app_name">Kertas Gunting Batu</string>
+    <string name="app_name2">Kertas Gunting Batu Remastered</string>
     <string name="tv_result_lose">LOSE!!</string>
     <string name="tv_result_draw">DRAW!!</string>
     <string name="tv_result_win">WIN!!</string>
     <string name="tv_result_vs">VS</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="text_intro_friend">Play with a friend</string>
+    <string name="text_intro_computer">Or against computer</string>
+    <string name="text_name_title">Enter your name</string>
+    <string name="text_name_you">You</string>
+    <string name="text_name_friend">Your friend (if you have one)</string>
+    <string name="text_name_error_toast">Name must be entered</string>
+    <string name="text_menu_title">choose your mode</string>
+    <string name="text_menu_vs_robot">Single Player</string>
+    <string name="text_menu_vs_human">PvP</string>
+    <string name="text_menu_snackbar">Welcome, %s</string>
+    <string name="text_menu_snackbar_dismiss">Close</string>
+    <string name="text_game_toast_locked">Player 1 Locked</string>
+    <string name="text_dialog_next">next round</string>
+    <string name="text_dialog_quit">quit to menu</string>
 </resources>
