@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_winner_dialog"
+    android:padding="16dp"
+    tools:context=".ui.game.WinnerDialogFragment">
+
+    <TextView
+        android:id="@+id/tv_dialog_name_winner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:textSize="@dimen/_20ssp"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="player one" />
+
+    <TextView
+        android:id="@+id/tv_dialog_win"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:textAllCaps="true"
+        android:textSize="@dimen/_20ssp"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_dialog_name_winner"
+        tools:text="wins!!" />
+
+    <ImageView
+        android:id="@+id/iv_dialog_vs"
+        android:layout_width="@dimen/_40sdp"
+        android:layout_height="@dimen/_40sdp"
+        android:src="@drawable/ic_dialog_vs"
+        app:layout_constraintBottom_toTopOf="@id/btn_dialog_next"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_dialog_win" />
+
+    <ImageView
+        android:id="@+id/iv_dialog_weapon_one"
+        android:layout_width="@dimen/_80sdp"
+        android:layout_height="@dimen/_80sdp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/iv_dialog_vs"
+        app:layout_constraintTop_toBottomOf="@id/tv_dialog_win"
+        tools:src="@drawable/ic_weapon_scissor" />
+
+    <ImageView
+        android:id="@+id/iv_dialog_weapon_two"
+        android:layout_width="@dimen/_80sdp"
+        android:layout_height="@dimen/_80sdp"
+        app:layout_constraintLeft_toRightOf="@id/iv_dialog_vs"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_dialog_win"
+        tools:src="@drawable/ic_weapon_scissor" />
+
+    <TextView
+        android:id="@+id/tv_dialog_name_one"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/_15ssp"
+        app:layout_constraintLeft_toLeftOf="@id/iv_dialog_weapon_one"
+        app:layout_constraintRight_toRightOf="@id/iv_dialog_weapon_one"
+        app:layout_constraintTop_toBottomOf="@id/iv_dialog_weapon_one"
+        tools:text="player one" />
+
+    <TextView
+        android:id="@+id/tv_dialog_name_two"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/_15ssp"
+        app:layout_constraintLeft_toLeftOf="@id/iv_dialog_weapon_two"
+        app:layout_constraintRight_toRightOf="@id/iv_dialog_weapon_two"
+        app:layout_constraintTop_toBottomOf="@id/iv_dialog_weapon_two"
+        tools:text="player two" />
+
+    <Button
+        android:id="@+id/btn_dialog_next"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/blue"
+        android:text="@string/text_dialog_next"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_dialog_name_one" />
+
+    <Button
+        android:id="@+id/btn_dialog_quit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/red"
+        android:text="@string/text_dialog_quit"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btn_dialog_next" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
