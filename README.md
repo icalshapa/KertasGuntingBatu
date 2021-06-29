@@ -1,4 +1,4 @@
-## KERTAS GUNTING BATU (REMASTERED)
+## KERTAS GUNTING BATU REMASTERED
 
 This is a simple game of Rock Paper Scissor, made to complete Chapter 5 Challenge of Binar Academy Android Bootcamp.
 
